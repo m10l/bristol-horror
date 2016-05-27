@@ -36,6 +36,17 @@
 
     <link href='https://fonts.googleapis.com/css?family=Simonetta:400,400italic|Pathway+Gothic+One' rel='stylesheet' type='text/css'>
     <style>
+
+      @keyframes grow-width {
+        from { width: 0%; }
+        to { width: 100%;  }
+      }
+
+      @keyframes fade-in {
+        from { opacity: 0; }
+        to { opacity: 1; }
+      }
+
       * {
         box-sizing: border-box;
       }
@@ -77,12 +88,26 @@
         margin: 0 0 50px;
       }
 
+      h2 .text-animation {
+        animation:
+          fade-in 2.5s 0.5s both,
+          grow-width 3s 0.5s both
+        ;
+        text-align: center;
+        margin: 0 auto;
+        white-space: nowrap;
+        overflow: hidden;
+      }
+
       header {
         position: absolute;
         top: 0;
         left: 0;
         width: 100%;
         padding: 0 20px;
+        animation:
+          fade-in 4s linear 5.5s both
+        ;
       }
 
       header h1 {
@@ -109,6 +134,15 @@
         font-size: 18px;
         font-size: 1.8rem;
         margin: 0 0 50px;
+        animation:
+          fade-in 2s 3s both
+        ;
+      }
+
+      form {
+        animation:
+          fade-in 2s 5s both
+        ;
       }
 
       small {
@@ -275,7 +309,7 @@
     </header>
     <main class="global-wrapper vertical-center">
       <div class="vertical-center__inner">
-        <h2>&ldquo;Do you like scary movies?&rdquo;</h2>
+        <h2><div class="text-animation">&ldquo;Do you like scary movies?&rdquo;</div></h2>
         <p class="lead">Join the club for regular horror screenings and events in Bristol.<br> We're not quite ready yet so please leave your email address if this sounds interesting to you.</p>
 
         <form action="//bristolhorror.us13.list-manage.com/subscribe/post?u=20c0dbf8882518ff46321e63f&amp;id=2fd34b807e" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
